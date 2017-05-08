@@ -5,7 +5,7 @@ description: Hi there! My name is Abdullah, and I'm a student at the London Desi
 author: Abdullah Ibne Atiq
 permalink: /project/:title/
 timezone: Europe/London
-paginate: 3
+paginate: 6
 
 ft: https://abdullahibneat.github.io/assets/images/siteFT.jpg
 twitter: abdullahibneat
