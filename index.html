@@ -16,7 +16,7 @@ home: true
       </div><br/>
       <!-- Grid items -->
       <div class="row">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         <div class="one-third column article-container"><a href="{{site.url}}{{post.url}}">
           {% if post.ft %}
           <img src="{{site.url}}/assets/renders/{{post.imgpath}}{{post.ft}}" alt="{{post.title}}" class="featured-image">
@@ -29,7 +29,7 @@ home: true
       </div>
       {% if paginator.total_pages > 1 %} 
       <div class="pagination">
-        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
-        {% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>{% endif %}
+        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}">Next &rarr;</a>{% endif %}
       </div>
       {% endif %}
