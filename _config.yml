@@ -1,0 +1,17 @@
+# The blog configuration 
+
+name: Abdullah Ibne Atiq
+description: Hi there! My name is Abdullah, and I'm a student at the London Design & Engineering UTC. Here you can find some of the 3D projects I've worked on during my school time.
+author: Abdullah Ibne Atiq
+permalink: /project/:title/
+timezone: Europe/London
+
+ft: https://abdullahibneat.github.io/assets/images/siteFT.jpg
+twitter: abdullahibneat
+sketchfab: abdullah.ibneatiq
+youtube: UCX-4KjfsHj5chFeGt3huLRA
+
+
+# This is the default that's used to preview.
+# Change this to your website's URL when you publish your site.
+url: https://abdullahibneat.github.io/

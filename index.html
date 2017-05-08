@@ -1,0 +1,29 @@
+---
+layout: default
+home: true
+
+# This is the home page. It uses the layout default.html and the following is pasted in the {{content}} section.
+---
+
+      <div class="row">
+        <!-- Page content -->
+        <div class="one-half column">
+          <!-- Title -->
+          <h4 class="article-page-title">Colldege student. Aspiring 3D artist.</h4>
+          <!-- Homepage Content -->
+          <p>Hi there! My name is Abdullah, and I'm a student at the London Design & Engineering UTC. Here you can find some of the 3D projects I've worked on during my school time.</p>
+        </div>
+      </div><br/>
+      <!-- Grid items -->
+      <div class="row">
+        {% for post in site.posts %}
+        <div class="one-third column article-container"><a href="{{site.url}}{{post.url}}">
+          {% if post.ft %}
+          <img src="{{site.url}}/assets/renders/{{post.imgpath}}{{post.ft}}" alt="{{post.title}}" class="featured-image">
+          {% else %}
+          <img src="https://placehold.it/853x480?text=NO+FEATURED+IMAGE" alt="{{post.title}}" class="featured-image">
+          {% endif %}
+          <h4 class="article-title">{{post.title}}</h4></a>
+        </div>
+        {% endfor %}
+      </div>
