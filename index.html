@@ -27,3 +27,9 @@ home: true
         </div>
         {% endfor %}
       </div>
+      {% if paginator.total_pages > 1 %} 
+      <div class="pagination">
+        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>{% endif %}
+      </div>
+      {% endif %}
