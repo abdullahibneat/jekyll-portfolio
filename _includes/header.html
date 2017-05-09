@@ -4,9 +4,9 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     {% if page.description %}
-    <meta name="description" content="1{{page.description}}">
+    <meta name="description" content="{{page.description}}">
     {% else %}
-    <meta name="description" content="2{{site.description}}">
+    <meta name="description" content="{{site.description}}">
     {% endif %}
     <title>{% if page.title %}{{ page.title }} | {{site.name}}{% else %}{{ site.name }}{% endif %}</title>
     <!-- Mobile Specific Metas -->
