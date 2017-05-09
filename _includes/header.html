@@ -23,7 +23,7 @@
       <meta property="og:type" content="article" />
       <meta property="og:url" content="{{site.url}}">
       <meta name="twitter:creator" content="@{{site.twitter}}">
-      <meta property="og:title" content="{{page.title}}">
+      <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{site.name}}{% endif %}">
       <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
       <meta property="og:image" content="{% if page.ft %}{{site.url}}/assets/renders/{{page.imgpath}}{{page.ft}}{% else %}{{site.ft}}{% endif %}">
   </head>
