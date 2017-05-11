@@ -5,6 +5,7 @@ layout: post
 
 imgpath: "FiatDucatoMaxiLWB/"
 ft: "ft.jpg"
+sketchfab: "1c2da1dc6b7e4c2295da01cb39ffc0d0"
 renders: "1.jpg,2.jpg,3.jpg,4.jpg"
 ---
 *3D model created in **3DS Max** by following a blueprint and has been textured in **Photoshop**.*
