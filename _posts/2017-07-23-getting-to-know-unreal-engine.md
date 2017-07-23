@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Getting to Know Unreal Engine"
 description: "A Google Cardboard VR project I made in Unreal Engine 4 to getting used to the basics of this game engine."
 layout: post
