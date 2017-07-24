@@ -6,6 +6,7 @@ author: Abdullah Ibne Atiq
 permalink: /project/:title/
 timezone: Europe/London
 paginate: 6
+paginate_path: "/page/:num/"
 
 ft: https://abdu.io/assets/images/siteFT.jpg
 twitter: abdullahibneat
