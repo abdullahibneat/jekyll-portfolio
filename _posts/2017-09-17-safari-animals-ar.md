@@ -5,6 +5,7 @@ layout: post
 
 imgpath: "SafariAnimalsAR/"
 ft: "ft.jpg"
+renders: "1.jpg,2.jpg"
 ---
 *Models and animations created in **3DS Max**, AR app packaged in **Unity**.*
 
