@@ -7,9 +7,9 @@ imgpath: "SafariAnimalsAR/"
 ft: "ft.jpg"
 renders: "1.jpg,2.jpg"
 ---
-*Models and animations created in **3DS Max**, AR app packaged in **Unity**.*
+*Models created, rigged and animated in **3DS Max**, AR app packaged in **Unity**.*
 
-I've been offered an internship opportunity at [Inition](https://www.inition.co.uk/), a leading AR and VR company in London. Throughout my stay, I had the opportunity to work on a personal project aimed to impprove my 3D modelling skills with the guidance of the lead 3D artist.
+I've been offered an internship opportunity at [Inition](https://www.inition.co.uk/), a leading AR and VR company in London. Throughout my stay, I had the opportunity to work on a personal project aimed to improve my 3D modelling skills with the guidance of the lead 3D artist.
 
 The project consisted in creating an AR app for mobile devices, inspired by an exhibition of [Marokka](https://marokka.com/) where people could have used an app on their smartphones to see the animals in augmented reality.
 
@@ -18,7 +18,7 @@ The project consisted in creating an AR app for mobile devices, inspired by an e
 
 I used 3DS Max to create the models. I decided to make them of a low poly count as the target device are smartphones which may not able to render high poly models in real-time. This also meant I could have followed the low poly style throughout the project. The main modifiers I used were the Symmetry modifier and the Noise modifier. I also made sure to clear all Smoothing Groups to enhance the low poly effect.
 
-For animation purposes, I had to rig the animals. Therefore I turned a Biped system into a Quadruped, and set the bones to the correct size and position for each animal. I then applied a Skin modifier to the animals so that I could link the Bones to the model. Finally, I set the Weight of each Bone so that each Bone has an effect on a certain part of the model (i.e. foot bone only affects the foot of the animal and not the head).
+For animation purposes, I had to rig the animals. Therefore I turned a Biped system into a Quadruped, and set the bones to the correct size and position for each animal. I then applied a Skin modifier to the animals so that I could link the Bones to the model. Finally, I set the Weight of each Bone so that each Bone influences a certain part of the model (i.e. foot bone only affects the foot of the animal and not the head).
 
 Lastly, I created a walk cycle for each animal. I found out the Copy/Paste rollout in the Motion panel to be a fast way of creating animations. I therefore used Google to find sketches of walk cycles for each animal I modelled and imported them into my scene as a reference. The next step was to set and copy two poses: the Pass pose and the Contact pose. Using the timeline, and setting Auto Key on, I pasted the poses in order and the 3DS Max did the work of filling out the frames in between the two poses (tweening).
 
