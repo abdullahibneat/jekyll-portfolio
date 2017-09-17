@@ -15,6 +15,7 @@ The project consisted in creating an AR app for mobile devices, inspired by an e
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/YEAd46worxE" frameborder="0" allowfullscreen></iframe>
 
+
 I used 3DS Max to create the models. I decided to make them of a low poly count as the target device are smartphones which may not able to render high poly models in real-time. This also meant I could have followed the low poly style throughout the project. The main modifiers I used were the Symmetry modifier and the Noise modifier. I also made sure to clear all Smoothing Groups to enhance the low poly effect.
 
 For animation purposes, I had to rig the animals. Therefore I turned a Biped system into a Quadruped, and set the bones to the correct size and position for each animal. I then applied a Skin modifier to the animals so that I could link the Bones to the model. Finally, I set the Weight of each Bone so that each Bone has an effect on a certain part of the model (i.e. foot bone only affects the foot of the animal and not the head).
