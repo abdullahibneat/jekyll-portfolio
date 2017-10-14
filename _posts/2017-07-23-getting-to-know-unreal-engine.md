@@ -11,6 +11,8 @@ renders: "1.jpg,2.jpg,3.jpg"
 
 As part of my course requires me to produce a game, I thought I'd explore the basic tools of Unreal Engine 4 prior to my learning in class. I decided to make a Google Cardboard VR project as my school has VR equipment, thus learning how to create a virtual reality environment from scratch. During the development, I learned how to use a variety of Unreal Engine's built-in tools, such as the Landscape Editor, the Foliage Tool, the Material Editor, Cinematics and the Blueprint Visual Scripting.
 
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/YvxGUpy1YLg" frameborder="0" allowfullscreen></iframe>
+
 I started by creating a blank project with "Mobile / Tablet" as target hardware, "Scalable 3D or 2D" graphics and no starter contents. Then I set up the project to be compatible with Google Cardboard (i.e. enable the Google VR plugin and set the API Levels). Before proceeding any further, I packaged an empty project with one floor to test it in VR.
 
 The first step was to create the landscape. I therefore created a Landscape Material with the Layer Blend node connected to the Base Colour. This node included two Constant3Vectors: a green one for the grass and a brown one for the dirt. I also applied some other nodes to the Normal of the material for the low poly effect. Finally, I created a landscape using the brush from the Landscape Editor. This included the creation of a hole for the lake.
@@ -24,5 +26,3 @@ Afterwards I had to provide the user with a navigation system. I therefore creat
 The last step was to add sounds. I found some forest sounds, a campfire sound and a lake sound. I imported them into the engine, created a Sound Cue and added a Loop node for each of these. I then placed the Sound Cues in the scene and set the Attenuation Sphere radius so that the sound could be heared when the user is close to the given object.
 
 Finally, I packaged the project for my Android device and tested it out!
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/YvxGUpy1YLg" frameborder="0" allowfullscreen></iframe>
