@@ -8,10 +8,11 @@ timezone: Europe/London
 paginate: 6
 paginate_path: "/page/:num/"
 
+email: me@abdu.io
 ft: https://abdu.io/assets/images/siteFT.jpg
 twitter: abdullahibneat
-sketchfab: abdullah.ibneatiq
-youtube: UCX-4KjfsHj5chFeGt3huLRA
+# sketchfab: abdullah.ibneatiq
+# youtube: UCX-4KjfsHj5chFeGt3huLRA
 
 
 # This is the default that's used to preview.

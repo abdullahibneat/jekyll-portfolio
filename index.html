@@ -29,7 +29,7 @@ home: true
       </div>
       {% if paginator.total_pages > 1 %} 
       <div class="pagination">
-        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
-        {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}">Next &rarr;</a>{% endif %}
+        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}" style="color:#e9ab7a">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}" style="color:#e9ab7a">Next &rarr;</a>{% endif %}
       </div>
       {% endif %}
