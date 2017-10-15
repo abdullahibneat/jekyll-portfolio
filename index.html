@@ -7,11 +7,18 @@ home: true
 
       <div class="row">
         <!-- Page content -->
-        <div class="one-half column">
+        <div class="one-half column" style="padding: 1.3em">
           <!-- Title -->
           <h4 class="article-page-title">College student. Aspiring 3D artist.</h4>
           <!-- Homepage Content -->
           <p>Hi there! My name is Abdullah, and I'm a student at the London Design & Engineering UTC. Here you can find some of the 3D projects I've worked on during my school time.</p>
+        </div>
+        <div class="one-half column contact">
+          <h4 class="article-page-title">Contact</h4>
+          {% if site.twitter %}
+          <p><b>Twitter</b>: <a href="https://twitter.com/{{site.twitter}}" target="_blank" style="color: white">@{{site.twitter}}</a></p>{% endif %}
+          {% if site.email %}
+          <p><b>Email</b>: <a href="mailto:{{site.email}}" style="color: white">{{site.email}}</a></p>{% endif %}
         </div>
       </div><br/>
       <!-- Grid items -->
