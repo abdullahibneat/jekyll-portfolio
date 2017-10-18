@@ -4,10 +4,7 @@ html{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-
 .nav-items{height:20em;width:10em;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:999;text-align:center;}
 .menubutton{font-size:3em;position:absolute;top:1em;right:1em;cursor:pointer;z-index:99;}
 div.nav-items a{color:#ecac7a;text-decoration:none;}
-.contact{background:#e9ab7a url("/assets/images/me.jpg");background-position:right;background-size:cover;color:white;padding:3em;line-height:0.3em;border-style: solid;border-width:1em;}
-/**
-.social{margin-top:10em;}
-.socialicon{max-width:2em;}**/
+.contact{background:#e9ab7a url("/assets/images/me.jpg");background-position:right;background-size:cover;color:white;padding:3em;line-height:0.9em;border-style: solid;border-width:1em;}
 .article-container{position:relative;margin:0 10px 0 0 !important;}
 .featured-image{max-width:100%;max-height:100%;}
 .article-title{position:absolute;top:50%;transform:translateY(-50%);text-align:center;width:100%;font-weight:800;color:white;}
