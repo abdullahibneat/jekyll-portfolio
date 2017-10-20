@@ -1,4 +1,4 @@
-html{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+/*html{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}*/
 .logo{margin:4em 0 4em 0;height:2.5em;}
 #nav{z-index:99;opacity:0.96;position:absolute;left:0;top:0;height:100%;width:100%;background-color:white;}
 .nav-items{height:20em;width:10em;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:999;text-align:center;}
