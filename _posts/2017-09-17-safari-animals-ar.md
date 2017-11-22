@@ -9,7 +9,7 @@ renders: "1.jpg,2.jpg"
 ---
 *Models created, rigged and animated in **3DS Max**, AR app packaged in **Unity**.*
 
-**<u>Try the game now! Head over to the [Google Play Store](https://abdu.io/play) and search *Safari Animals AR*.</u>**
+**<u>Try the game now! Head over to the <a href="https://abdu.io/play">Google Play Store</a> and search *Safari Animals AR*.</u>**
 
 I've been offered an internship opportunity at [Inition](https://www.inition.co.uk/), a leading AR and VR company in London. Throughout my stay, I had the opportunity to work on a personal project aimed to improve my 3D modelling skills with the guidance of the lead 3D artist.
 
