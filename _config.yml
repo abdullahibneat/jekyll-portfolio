@@ -22,7 +22,3 @@ url: https://abdu.io
 # Sitemap
 gems:
   - jekyll-sitemap
-
-# Plugins
-plugins:
-  - jekyll-redirect-from
