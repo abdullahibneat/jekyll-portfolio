@@ -1,7 +1,7 @@
 # The blog configuration 
 
 name: Abdullah Ibne Atiq
-description: Hi there! My name is Abdullah, and I'm a student at the London Design & Engineering UTC. Here you can find some of the 3D projects I've worked on during my school time.
+description: Hi there! My name is Abdullah, and I'm a student at the London Design & Engineering UTC. Here you can find some of the projects I've worked on.
 author: Abdullah Ibne Atiq
 permalink: /project/:title/
 timezone: Europe/London
