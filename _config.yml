@@ -1,20 +1,35 @@
-# The blog configuration 
-
+# Your website's name
 name: Abdullah Ibne Atiq
-description: Hi there! My name is Abdullah, and I'm a student at the London Design & Engineering UTC. Here you can find some of the projects I've worked on.
+
+# Website description, shown on index.html
+description: Hi there! My name is Abdullah, and I'm a student passionate about the apllication of Computer Science to improve the way we live. Here you can find some of the projects I've worked on.
+
+# Your name
 author: Abdullah Ibne Atiq
+
+# Customize article URL format
 permalink: /project/:title/
+
+# Set your timezone
 timezone: Europe/London
+
+# How many articles per page in index.html?
 paginate: 6
+
+# Customize index pages URL format
 paginate_path: "/page/:num/"
 
-indextitle: College student. Aspiring 3D artist.
-email: me@abdu.io
-ft: https://abdu.io/assets/images/siteFT.jpg
-twitter: abdullahibneat
-# sketchfab: abdullah.ibneatiq
-# youtube: UCX-4KjfsHj5chFeGt3huLRA
+# H1 title in index.html
+indextitle: Aspiring programmer. 3D Artist. XR technology enthusiast.
 
+# Your email
+email: me@abdu.io
+
+# Direct URL to website featured image for use on social networks
+ft: https://abdu.io/assets/images/siteFT.jpg
+
+# Twitter handle
+twitter: abdullahibneat
 
 # This is the default that's used to preview.
 # Change this to your website's URL when you publish your site.

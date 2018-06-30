@@ -4,21 +4,23 @@ layout: default
 # This is the template for a post. It uses the layout default.html.
 ---
 
-        <div class="one-third column">
-          <!-- Article title -->
-          <h1 class="article-page-title">{{page.title}}</h1>
-          <small>{{ page.date | date: "%B %d, %Y" }}</small>
-        </div>
-        <div class="two-thirds column">
-          <!-- Article content -->
-          <p>{{content}}</p>
-          {% if page.sketchfab %}
-          <br><iframe width="100%" height="315" src="https://sketchfab.com/models/{{page.sketchfab}}/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-          {% endif %}
-        </div>
+      <div class="one-third column">
+        <!-- Article title -->
+        <h1 class="article-page-title">{{page.title}}</h1>
+        <!-- Article date -->
+        <small>{{ page.date | date: "%B %d, %Y" }}</small>
+      </div>
+      <div class="two-thirds column">
+        <!-- Article content -->
+        <p>{{content}}</p>
+        <!-- If sketchfab model is defined on header -->
+        {% if page.sketchfab %}
+        <br><iframe width="100%" height="315" src="https://sketchfab.com/models/{{page.sketchfab}}/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> {% endif %}
       </div>
     </div>
-{% assign imgurls = {{page.renders}} | split: ","  %}
-{% for imgurl in imgurls %}
-<img src="{{site.url}}/assets/renders/{{page.imgpath}}{{imgurl}}" alt="{{page.title}}" class="article-image"><br/><br/><br/><br/>
-{% endfor %}
+    </div>
+    <!-- For each article image -->
+    {% assign imgurls = {{page.renders}} | split: "," %}
+    {% for imgurl in imgurls %}
+    <img src="{{site.url}}/assets/renders/{{page.imgpath}}{{imgurl}}" alt="{{page.title}}" class="article-image"><br/><br/><br/><br/>
+    {% endfor %}
