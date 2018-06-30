@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <!-- If page includes description -->
+    {% if page.description %}
+    <meta name="description" content="{{page.description}}">
+    <!-- Otherwise use standard description defined in _config.yml -->
+    {% else %}
+    <meta name="description" content="{{site.description}}"> {% endif %}
+    <!-- Page title -->
+    <title>{% if page.title %}{{ page.title }} | {{site.name}}{% else %}{{ site.name }}{% endif %}</title>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{site.url}}/assets/css/normalize.css">
+    <link rel="stylesheet" href="{{site.url}}/assets/css/skeleton.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{site.url}}/assets/images/favicon.png">
+    <!-- Social meta tag -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{site.url}}">
+    <meta name="twitter:creator" content="@{{site.twitter}}">
+    <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{site.name}}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
+    <meta property="og:image" content="{% if page.ft %}{{site.url}}/assets/renders/{{page.imgpath}}{{page.ft}}{% else %}{{site.ft}}{% endif %}">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <a href="{{site.url}}"><img src="{{site.url}}/assets/images/logo.svg" alt="{{site.name}}" class="logo"></a>

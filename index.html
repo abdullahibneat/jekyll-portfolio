@@ -1,0 +1,51 @@
+---
+layout: default
+home: true
+
+# This is the home page. It uses the layout default.html and the following is pasted in the {{content}} section.
+---
+
+      <div class="one-half column" style="padding: 1.3em">
+
+        <!-- Title -->
+        <h4 class="article-page-title">{{site.indextitle}}</h4>
+
+        <!-- Homepage Content -->
+        <p>{{site.description}}</p>
+      </div>
+      <div class="one-half column contact" style="margin-left: 0">
+        <!-- Contact section -->
+        <h4 class="article-page-title">Contact</h4>
+        <!-- If a twitter handle is defined in _config.yml -->
+        {% if site.twitter %}
+        <p><b>Twitter</b>: <a href="https://twitter.com/{{site.twitter}}" target="_blank" style="color: white">@{{site.twitter}}</a></p>{% endif %}
+        <!-- If an email address is defined in _config.yml -->
+        {% if site.email %}
+        <p><b>Email</b>: <a href="mailto:{{site.email}}" style="color: white">{{site.email}}</a></p>{% endif %}
+      </div>
+    </div><br/>
+    <!-- Grid items -->
+    <div class="row">
+      {% for post in paginator.posts %}
+      <div class="one-third column article-container">
+        <a href="{{site.url}}{{post.url}}">
+          <!-- If article has a featured image -->
+          {% if post.ft %}
+          <img src="{{site.url}}/assets/renders/{{post.imgpath}}{{post.ft}}" alt="{{post.title}}" class="featured-image"> {% else %}
+          <!-- Otherwise display placeholder -->
+          <img src="https://placehold.it/853x480?text=NO+FEATURED+IMAGE" alt="{{post.title}}" class="featured-image"> {% endif %}
+          <!-- Article title -->
+          <h4 class="article-title">{{post.title}}</h4>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- If there is pagination -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      <!-- Next page arrow -->
+      {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}" style="color:#e9ab7a">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
+      <!-- Previous page arrow -->
+      {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}" style="color:#e9ab7a">Next &rarr;</a>{% endif %}
+    </div>
+    {% endif %}

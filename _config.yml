@@ -1,0 +1,40 @@
+# Your website's name
+name: My portfolio
+
+# Website description, shown on index.html
+description: Hi there! My name is Abdullah, and this is the template I developed for my portfolio based on Jekyll.
+
+# Your name
+author: Abdullah Ibne Atiq
+
+# Customize article URL format
+permalink: /project/:title/
+
+# Set your timezone
+timezone: Europe/London
+
+# How many articles per page in index.html?
+paginate: 6
+
+# Customize index pages URL format
+paginate_path: "/page/:num/"
+
+# H1 title in index.html
+indextitle: A minimal portfolio template.
+
+# Your email
+email: hello@world.com
+
+# Direct URL to website featured image for use on social networks
+ft: https://abdu.io/assets/images/siteFT.jpg
+
+# Twitter handle
+twitter: twitter
+
+# This is the default that's used to preview.
+# Change this to your website's URL when you publish your site.
+url: https://hello.world
+
+# Sitemap
+gems:
+  - jekyll-sitemap
