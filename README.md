@@ -2,7 +2,10 @@
 This branch contains the template currently used in my online portfolio. It has been developed using HTML and [Liquid](https://shopify.github.io/liquid/) for use with [Jekyll](https://jekyllrb.com/). A demo can be seen running at [https://abdu.io](https://abdu.io).
 The HTML source can be found on the [html-template branch](https://github.com/abdullahibneat/abdullahibneat.github.io/tree/html-template).
 
-![](https://raw.githubusercontent.com/abdullahibneat/abdullahibneat.github.io/jekyll-template/render.jpg "Render of the template")
+![Render of the template](https://raw.githubusercontent.com/abdullahibneat/abdullahibneat.github.io/jekyll-template/render.jpg)
+
+## Acknowledgements
+Dave Gamache ([@dhg](https://github.com/dhg)) for creating [Skeleton](http://getskeleton.com/), a simple, responsive CSS boilerplate.
 
 # Getting started
 
