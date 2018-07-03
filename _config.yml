@@ -38,3 +38,4 @@ url: https://abdu.io
 # Sitemap
 gems:
   - jekyll-sitemap
+  - jekyll-redirect-from
