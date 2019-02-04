@@ -18,8 +18,15 @@ body {
 	padding: 1rem
 }
 
-section {
-	
+/* Scrollbar */
+*::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--dark);
+	border-radius: 0.5rem;
 }
 
 /* 
@@ -29,11 +36,13 @@ section {
 /* Container */
 .header {
 	display: grid;
+	transition: 0.2s;
 }
 
 /* Logo */
 .logo {
 	grid-area: logo;
+	transition: 0.2s;
 }
 
 .logo h1 {
@@ -59,6 +68,7 @@ section {
 /* Intro */
 .intro {
 	grid-area: intro;
+	transition: 0.2s;
 }
 
 /* Skills */
@@ -68,6 +78,7 @@ section {
 	color: var(--light);
 	padding: 0.5rem;
 	margin-bottom: 0.5rem;
+	transition: 0.2s;
 }
 
 /* Contact */
@@ -80,10 +91,12 @@ section {
 	color: var(--light);
 	text-align: center;
 	margin-top: 5rem;
+	transition: 0.2s;
 }
 
 .contact-details {
 	display: grid;
+	transition: 0.2s;
 }
 
 .contact-details p:nth-child(odd) {
@@ -100,6 +113,44 @@ section {
 * FEATURED PROJECTS
 */
 
+.featured-projects {
+	position: relative;
+	width: 100vw;
+	margin-left: -50vw;
+	left: 50%;
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.featured-projects .project {
+	display: inline-block;
+	margin: 1rem 2rem;
+	max-width: 50rem;
+}
+
+/*
+* PROJECTS
+*/
+
+/* Project container */
+.project {
+	position: relative;
+}
+
+/* Image background */
+.project img {
+	width: 100%;
+	height: auto;
+}
+
+/* Title */
+.project h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 /*
 * MEDIA QUERIES
 */
@@ -109,12 +160,10 @@ section {
 
 	/* Full-width contact on mobile devices */
 	.contact {
-		width: 100vw;
 		position: relative;
-		left: 50%;
-		right: 50%;
+		width: 100vw;
 		margin-left: -50vw;
-		margin-right: -50vw;
+		left: 50%;
 		padding: 2rem 0;
 	}
 }
@@ -183,8 +232,8 @@ section {
 	}
 }
 
-/* Laptops > 768px */
-@media only screen and (min-width: 768px) {
+/* Laptops > 800px */
+@media only screen and (min-width: 800px) {
 	html {
 		margin: 0 auto;
 		padding: 0 5rem;
