@@ -37,13 +37,13 @@ body {
 /* Container */
 .header {
 	display: grid;
-	transition: 0.2s;
+	transition: .5s ease;
 }
 
 /* Logo */
 .logo {
 	grid-area: logo;
-	transition: 0.2s;
+	transition: .5s ease;
 }
 
 .logo h1 {
@@ -57,19 +57,19 @@ body {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100%; }
+	from { width: 0 }
+	to { width: 100%; }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--dark) }
+	from, to { border-color: transparent }
+	50% { border-color: var(--dark) }
 }
 
 /* Intro */
 .intro {
 	grid-area: intro;
-	transition: 0.2s;
+	transition: .5s ease;
 }
 
 /* Skills */
@@ -79,7 +79,7 @@ body {
 	color: var(--light);
 	padding: 0.5rem;
 	margin-bottom: 0.5rem;
-	transition: 0.2s;
+	transition: .5s ease;
 }
 
 /* Contact */
@@ -92,12 +92,12 @@ body {
 	color: var(--light);
 	text-align: center;
 	margin-top: 5rem;
-	transition: 0.2s;
+	transition: .5s ease;
 }
 
 .contact-details {
 	display: grid;
-	transition: 0.2s;
+	transition: .5s ease;
 }
 
 .contact-details p:nth-child(odd) {
@@ -129,7 +129,7 @@ body {
 	max-width: 50rem;
 }
 
-.featured-projects .project h2 {
+.featured-projects .project .project-title {
 	font-size: 2.5rem;
 }
 
@@ -153,7 +153,7 @@ body {
 
 .projects h1, .projects p {
 	grid-column: 1 / -1;
-	margin: 0 0 3rem 0;
+	margin: 1rem 0 3rem 0;
 	padding-left: 3rem;
 }
 
@@ -165,13 +165,22 @@ body {
 .project {
 	margin: 1rem;
 	display: grid;
-	text-align: center;
-	align-items: center;
 }
 
-.project img, .project h2 {
-	width: 100%;
+.project img, .project .project-title {
 	grid-area: 1 / 1 / -1 / -1;
+	width: 100%;
+}
+
+.project .project-title {
+	display: grid;
+	width: 100%;
+	transition: .5s ease;
+	margin: 0;
+	background-color: rgba(255,204,153,0.5);
+	color: white;
+	text-align: center;
+	align-items: center;
 }
 
 .paginator {
@@ -192,6 +201,7 @@ body {
 /*
 * FOOTER
 */
+
 footer {
 	position: relative;
 	width: 100vw;
@@ -314,12 +324,30 @@ footer p:before {
 		max-width: 1200px;
 	}
 
+	/*
+	* HEADER SECTION
+	*/
+
 	.contact {
 		margin-left: 2.5rem;
 		margin-right: 2.5rem;
 	}
 
+	/*
+	* PROJECTS
+	*/
+
 	.projects {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.project .project-title {
+		width: 0;
+		color: rgba(255,255,255,0);
+	}
+
+	.project:hover .project-title {
+		width: 100%;
+		color: white;
 	}
 }
