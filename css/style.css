@@ -37,13 +37,11 @@ body {
 /* Container */
 .header {
 	display: grid;
-	transition: .5s ease;
 }
 
 /* Logo */
 .logo {
 	grid-area: logo;
-	transition: .5s ease;
 }
 
 .logo h1 {
@@ -69,7 +67,6 @@ body {
 /* Intro */
 .intro {
 	grid-area: intro;
-	transition: .5s ease;
 }
 
 /* Skills */
@@ -79,7 +76,6 @@ body {
 	color: var(--light);
 	padding: 0.5rem;
 	margin-bottom: 0.5rem;
-	transition: .5s ease;
 }
 
 /* Contact */
@@ -92,12 +88,10 @@ body {
 	color: var(--light);
 	text-align: center;
 	margin-top: 5rem;
-	transition: .5s ease;
 }
 
 .contact-details {
 	display: grid;
-	transition: .5s ease;
 }
 
 .contact-details p:nth-child(odd) {
