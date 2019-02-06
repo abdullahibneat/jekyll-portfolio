@@ -70,7 +70,7 @@ body {
 }
 
 /* Skills */
-.skills div {
+.skill {
 	display: inline-block;
 	background-color: var(--dark);
 	color: var(--light);
@@ -117,13 +117,13 @@ body {
 	white-space: nowrap;
 }
 
-.featured-projects .project {
+.featured-projects .project-container {
 	display: inline-grid;
 	margin: 2rem;
 	max-width: 50rem;
 }
 
-.featured-projects .project .project-title {
+.featured-projects .project-container .project {
 	font-size: 2.5rem;
 }
 
@@ -156,17 +156,18 @@ body {
 	margin: 5rem 0 0;
 }
 
-.project {
+.project-container {
 	margin: 1rem;
 	display: grid;
+	position: relative;
 }
 
-.project img, .project .project-title {
+.project-container img, .project-container .project {
 	grid-area: 1 / 1 / -1 / -1;
 	width: 100%;
 }
 
-.project .project-title {
+.project-container .project {
 	display: grid;
 	width: 100%;
 	transition: .5s ease;
@@ -175,6 +176,18 @@ body {
 	color: white;
 	text-align: center;
 	align-items: center;
+}
+
+.project-container .skills {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 0.5rem 0.5rem 0;
+}
+
+.project-container .skills .skill {
+	background-color: var(--light);
+	color: var(--dark);
 }
 
 .paginator {
@@ -335,13 +348,23 @@ footer p:before {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
-	.project .project-title {
+	.project-container .project {
 		width: 0;
 		color: rgba(255,255,255,0);
 	}
 
-	.project:hover .project-title {
+	.project-container:hover .project {
 		width: 100%;
 		color: white;
+	}
+
+	.project-container .skills .skill {
+		background-color: var(--dark);
+		color: var(--light);
+	}
+
+	.project-container:hover .skill {
+		background-color: var(--light);
+		color: var(--dark);
 	}
 }
