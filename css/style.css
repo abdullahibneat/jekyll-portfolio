@@ -19,6 +19,10 @@ body {
 	margin: 0;
 }
 
+a {
+	color: var(--dark);
+}
+
 /* Scrollbar */
 *::-webkit-scrollbar {
 	width: 0.5rem;
