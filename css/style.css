@@ -10,6 +10,7 @@
 html {
 	box-sizing: border-box;
 	font-family: monospace;
+	line-height: 1.5;
 	color: var(--dark);
 	overflow-x: hidden;
 }
@@ -36,6 +37,10 @@ a {
 
 /* 
 * HEADER SECTION 
+*/
+
+/*
+* HOME
 */
 
 /* Container */
@@ -106,6 +111,56 @@ a {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 0;
+}
+
+/*
+* ARTICLE
+*/
+
+.article {
+	background-image: linear-gradient(rgba(255,204,153,0.5), rgba(255,204,153,0.5)), url(../img/ft.jpg);
+	height: 50vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.article .logo h1 {
+	color: var(--light);
+}
+
+.article .intro h1 {
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: var(--dark);
+}
+
+.article .intro h1 span {
+	background-color: var(--light);
+	padding: 0 1rem;
+	-webkit-box-decoration-break: clone;
+}
+
+.article:before {
+	content: "";
+	background-color: var(--light);
+	-webkit-mask-image: url(../img/triangle.svg);
+	transform: scaleX(-1);
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	left: 0;
+	right: 0;
+}
+
+.article-content {
+	padding: 0 2rem 5rem;
+}
+
+.article-content img {
+	width: 100%;
+	margin: 0.5rem 0;
 }
 
 /*
@@ -231,7 +286,8 @@ footer p {
 
 footer p:before {
 	content: "";
-	background-image: url(../img/triangle.svg);
+	background-color: var(--primary);
+	-webkit-mask-image: url(../img/triangle.svg);
 	position: absolute;
 	top: -50px;
 	height: 50px;
@@ -329,6 +385,16 @@ footer p:before {
 
 /* Laptops > 800px */
 @media only screen and (min-width: 800px) {
+
+	/* Full-width article hero on laptops */
+	.article {
+		position: relative;
+		width: 100vw;
+		margin-left: -50vw;
+		left: 50%;
+		padding: 3rem 8rem;
+	}
+
 	html {
 		margin: 0 auto;
 		padding: 0 5rem;
