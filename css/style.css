@@ -195,9 +195,8 @@ section h1 {
 */
 
 .featured-projects-title {
-	padding: 3rem 0 0 3rem;
+	padding: 3rem 0 0;
 	max-width: 1200px;
-	margin: 0 auto;
 }
 
 .featured-projects {
@@ -359,6 +358,10 @@ footer:before {
 
 	.separator:after {
 		height: 50px;
+	}
+
+	.featured-projects-title {
+		margin: 0 auto;
 	}
 
 	.projects {
