@@ -44,17 +44,18 @@ section h1 {
 	font-size: 2rem;
 }
 
-/* 
-* HEADER SECTION 
-*/
-
-/* First section (header) always has a full-width background */
-/* Needs to be inline style */
-section:first-of-type {
-	background: linear-gradient(rgba(255,204,153,0.5), rgba(255,204,153,0.5)), url(../img/ft.jpg) center no-repeat;
+/* Optional full-width background, image specified as inline style */
+/* Background with color overlay: background: linear-gradient(rgba(255,204,153,0.5), rgba(255,204,153,0.5)), url(path/to/image); */
+.background {
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 0;
 }
+
+/* 
+* HEADER SECTION 
+*/
 
 /* Container */
 .header {
@@ -84,6 +85,13 @@ section:first-of-type {
 		typing 1.5s steps(10, end),
 		blink-caret 1s step-end infinite;
 }
+
+.background .logo h1 {
+	color: #fff;
+	border-color: #fff;
+}
+
+
 
 @keyframes typing {
 	from { width: 0 }
@@ -156,13 +164,11 @@ section:first-of-type {
 	background-color: #fff;
 	-webkit-mask-image: url(../img/triangle.svg);
 	transform: scaleX(-1);
-	height: 50px;
+	height: 30px;
 	position: absolute;
-	bottom: 0;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+	bottom: -1px;
+	left: 0;
+	right: 0;
 }
 
 /*
@@ -292,13 +298,13 @@ footer p {
 }
 
 /* Footer separator */
-footer p:after {
+footer:before {
 	content: "";
 	background-color: #fc9;
 	-webkit-mask-image: url(../img/triangle.svg);
 	position: absolute;
-	top: -49px;
-	height: 50px;
+	top: -29px;
+	height: 30px;
 	left: 0;
 	right: 0;
 }
@@ -351,13 +357,31 @@ footer p:after {
 		padding-bottom: 7rem;
 	}
 
+	.separator:after {
+		height: 50px;
+	}
+
 	.projects {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	footer:before {
+		height: 50px;
+		top: -49px;
 	}
 }
 
 /* Laptops >= 800px */
 @media only screen and (min-width: 800px) {
+
+	/* Full-width separator */
+	.separator:after {
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+
 	/* Spacing at beginning and end */
 	.featured-projects:before, .featured-projects:after {
 		content: "";
