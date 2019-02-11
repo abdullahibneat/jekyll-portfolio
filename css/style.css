@@ -34,7 +34,7 @@ h1 {
 * SECTIONS
 */
 
-section {
+section, header {
 	display: grid;
 	align-items: center;
 	padding: 3rem;
@@ -46,7 +46,7 @@ section h1 {
 
 /* Optional full-width background, image specified as inline style */
 /* Background with color overlay: background: linear-gradient(rgba(255,204,153,0.5), rgba(255,204,153,0.5)), url(path/to/image); */
-.background {
+header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -207,7 +207,7 @@ section h1 {
 }
 
 .featured-projects .project {
-	display: inline-block;
+	display: inline-grid;
 	margin-right: 3rem;
 }
 
@@ -238,8 +238,13 @@ section h1 {
 
 .project {
 	display: grid;
-	position: relative;
 	text-align: center;
+	align-items: center;
+}
+
+.project * {
+	grid-row: 1;
+	grid-column: 1;
 }
 
 .project img {
@@ -247,10 +252,7 @@ section h1 {
 }
 
 .project h2 {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	padding: 0 2rem;
 }
 
 .title {
