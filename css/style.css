@@ -240,6 +240,7 @@ header {
 	display: grid;
 	text-align: center;
 	align-items: center;
+	text-decoration: none;
 }
 
 .project * {
@@ -395,5 +396,14 @@ footer:before {
 
 	.projects {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.project .title {
+		opacity: 0.75;
+		transition: .2s;
+	}
+
+	.project:hover .title {
+		opacity: 1;
 	}
 }
