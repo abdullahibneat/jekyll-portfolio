@@ -293,7 +293,7 @@ footer {
 	text-align: center;
 	color: white;
 	background-color: #fc9;
-	padding-bottom: 25px;
+	padding: .5rem 0 1rem;
 }
 
 footer p {
