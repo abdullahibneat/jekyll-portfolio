@@ -195,7 +195,7 @@ header {
 */
 
 .featured-projects-title {
-	padding: 3rem 0 0;
+	padding-top: 3rem;
 	max-width: 1200px;
 }
 
@@ -241,6 +241,7 @@ header {
 	text-align: center;
 	align-items: center;
 	text-decoration: none;
+	box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.15);
 }
 
 .project * {
@@ -365,6 +366,7 @@ footer:before {
 
 	.featured-projects-title {
 		margin: 0 auto;
+		padding-left: 3rem;
 	}
 
 	.projects {
@@ -396,6 +398,14 @@ footer:before {
 
 	.projects {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.project {
+		transition: .5s;
+	}
+
+	.project:hover {
+		box-shadow: 0px 5px 45px 0px rgba(0, 0, 0, 0.3);
 	}
 
 	.project .title {
