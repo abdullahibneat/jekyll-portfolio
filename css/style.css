@@ -74,6 +74,7 @@ header {
 .logo {
 	grid-area: logo;
 	margin: 3rem auto;
+	text-decoration: none;
 }
 
 .logo h1 {
