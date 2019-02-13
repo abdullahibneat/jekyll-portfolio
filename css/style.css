@@ -186,6 +186,10 @@ header {
 	margin: 1rem 0;
 }
 
+.article-content p:first-of-type {
+	font-style: italic;
+}
+
 .article-content img {
 	width: 100%;
 	margin: 0.5rem 0;
