@@ -87,6 +87,10 @@ header {
 		blink-caret 1s step-end infinite;
 }
 
+header .background {
+	background-color: #fc9;
+}
+
 .background .logo h1 {
 	color: #fff;
 	border-color: #fff;
