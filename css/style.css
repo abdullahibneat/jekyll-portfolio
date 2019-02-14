@@ -399,6 +399,10 @@ footer:before {
 /* Laptops >= 800px */
 @media only screen and (min-width: 800px) {
 
+	.header {
+		width: 33vh;
+	}
+
 	/* Full-width separator */
 	.separator:after {
 		left: 50%;
