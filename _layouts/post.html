@@ -4,23 +4,26 @@ layout: default
 # This is the template for a post. It uses the layout default.html.
 ---
 
-      <div class="one-third column">
-        <!-- Article title -->
-        <h1 class="article-page-title">{{page.title}}</h1>
-        <!-- Article date -->
-        <small>{{ page.date | date: "%B %d, %Y" }}</small>
-      </div>
-      <div class="two-thirds column">
-        <!-- Article content -->
-        <p>{{content}}</p>
-        <!-- If sketchfab model is defined on header -->
-        {% if page.sketchfab %}
-        <br><iframe width="100%" height="315" src="https://sketchfab.com/models/{{page.sketchfab}}/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe> {% endif %}
-      </div>
-    </div>
-    </div>
-    <!-- For each article image -->
-    {% assign imgurls = {{page.renders}} | split: "," %}
-    {% for imgurl in imgurls %}
-    <img src="{{site.url}}/assets/renders/{{page.imgpath}}{{imgurl}}" alt="{{page.title}}" class="article-image"><br/><br/><br/><br/>
-    {% endfor %}
+    <header class="background" {% if page.featured %}style="background-image: url({{ site.url  }}/{{ site.media-folder }}/{{ page.media-folder }}/{{ page.featured }});"{% endif %}>
+        <div class="header separator">
+            <a class="logo" href="{{ site.url }}">
+                <h1>{{ site.logo }}</h1>
+            </a>
+            <div class="intro">
+                <h1><span class="title">{{ page.title }}</span></h1>
+                {% if page.skills %}
+                    {% for skill in page.skills %}
+                        <div class="skill">{{ skill }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <section class="article-content">
+    <p>{{ page.date | date: "%B %d, %Y" }}</p>
+
+        {{ content }}
+    </section>
+
+    {% include footer.html %}

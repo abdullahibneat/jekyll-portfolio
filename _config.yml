@@ -1,40 +1,54 @@
-# Your website's name
-name: My portfolio
+# Change this to your website's URL when you publish your site.
+#url: https://hello.world
+url: C:/Users/iAbdu/Desktop/jekyll-%20template/abdullahibneat.github.io/_site
 
-# Website description, shown on index.html
+# CSS: path to CSS folder
+css-folder: assets/css
+
+# Media: path to folder containing all media (including projects)
+media-folder: assets/media
+
+#
+# Global variables
+#
+
+# Logo: text with typewriter animation
+logo: /testing
+
+# Name: website's name
+name: Abdullah Ibne Atiq
+
+# Description: A brief description that appears under the logo
 description: Hi there! My name is Abdullah, and this is the template I developed for my portfolio based on Jekyll.
 
-# Your name
-author: Abdullah Ibne Atiq
+# Featured: an image displayed on social media when this website is linked, saved in the "media" folder
+featured: siteFT.jpg
 
-# Customize article URL format
+# Twitter: Twitter handle (without @)
+twitter: twitter
+
+# LinkedIn: link to LinkedIn profile
+linkedin: abdullahibneat
+
+# Email: email address
+email: hello@world.com
+
+# Skills: array of skills to be shown under the description
+skills: [Multiple, Skills, Can, Be, listed]
+
+#
+# Required plugins
+#
+
+plugins:
+  - jekyll-sitemap  # Generates sitemap
+  - jekyll-paginate # Paginates posts in index.html
+
+# Customize posts URL format
 permalink: /project/:title/
 
-# Set your timezone
-timezone: Europe/London
-
-# How many articles per page in index.html?
+# How many posts per page in index.html?
 paginate: 6
 
 # Customize index pages URL format
 paginate_path: "/page/:num/"
-
-# H1 title in index.html
-indextitle: A minimal portfolio template.
-
-# Your email
-email: hello@world.com
-
-# Direct URL to website featured image for use on social networks
-ft: https://abdu.io/assets/images/siteFT.jpg
-
-# Twitter handle
-twitter: twitter
-
-# This is the default that's used to preview.
-# Change this to your website's URL when you publish your site.
-url: https://hello.world
-
-# Sitemap
-gems:
-  - jekyll-sitemap

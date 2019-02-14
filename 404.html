@@ -1,8 +1,35 @@
 ---
-layout: page
-title: 404 - Page not found
-permalink: /404.html
 ---
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	<!-- Page title and description -->
+	<title>404 - Page not found</title>
 
-<!-- Customize your 404 error message -->
-Sorry, we can't find that page that you're looking for. You can try again by going <a href="{{ site.baseurl }}">back to the homepage</a>.
+	<!-- 404 shouldn't be indexed -->
+	<meta name="robots" content="noindex">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ site.url }}/{{ site.css-folder }}/style.css">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="{{ site.url }}/{{ site.media-folder }}/favicon.png">
+</head>
+<body style="background-color: #fc9">
+    <header class="background">
+        <div class="header">
+            <a class="logo" href="{{ site.url }}">
+                <h1>{{ site.logo }}</h1>
+            </a>
+        </div>
+    </header>
+
+	<section style="max-width: 800px; margin: 0 auto">
+		<h1 style="text-align: center; font-size: 5rem; line-height: 1; margin: 2rem auto">Error 404: Page not found.</h1>
+		<p style="text-align: center; font-size: 2rem">Sorry, we can't find that page that you're looking for. You can try again by going <a href="{{ site.url }}">back to the homepage</a>.</p>
+	</section>
+</body>
+</html>
