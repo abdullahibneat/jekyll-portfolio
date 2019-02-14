@@ -87,7 +87,7 @@ header {
 		blink-caret 1s step-end infinite;
 }
 
-header .background {
+.background {
 	background-color: #fc9;
 }
 
