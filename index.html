@@ -5,47 +5,96 @@ home: true
 # This is the home page. It uses the layout default.html and the following is pasted in the {{content}} section.
 ---
 
-      <div class="one-half column" style="padding: 1.3em">
-
-        <!-- Title -->
-        <h4 class="article-page-title">{{site.indextitle}}</h4>
-
-        <!-- Homepage Content -->
-        <p>{{site.description}}</p>
+  <header>
+    <div class="header">
+      <a class="logo" href="{{ site.url }}">
+        <h1>{{ site.logo }}</h1>
+      </a>
+      <div class="intro">
+        <p>{{ site.description }}</p>
+        {% if site.skills %}
+          {% for skill in site.skills %}
+            <div class="skill">{{ skill }}</div>
+          {% endfor %}
+        {% endif %}
       </div>
-      <div class="one-half column contact" style="margin-left: 0">
-        <!-- Contact section -->
-        <h4 class="article-page-title">Contact</h4>
-        <!-- If a twitter handle is defined in _config.yml -->
-        {% if site.twitter %}
-        <p><b>Twitter</b>: <a href="https://twitter.com/{{site.twitter}}" target="_blank" style="color: white">@{{site.twitter}}</a></p>{% endif %}
-        <!-- If an email address is defined in _config.yml -->
-        {% if site.email %}
-        <p><b>Email</b>: <a href="mailto:{{site.email}}" style="color: white">{{site.email}}</a></p>{% endif %}
+      <div class="contact">
+        <div class="contact-details">
+          <h1>Contact</h1>
+
+          {% if site.linkedin %}
+            <p>LinkedIn:</p>
+            <p><a target="_blank" href="https://linkedin.com/in/{{ site.linkedin }}">linkedin.com/in/<br>{{ site.linkedin }}</a></p>
+          {% endif %}
+
+          {% if site.twitter %}
+            <p>Twitter:</p>
+            <p><a target="_blank" href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></p>
+          {% endif %}
+
+          {% if site.email %}
+            <p>Email:</p>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          {% endif %}
+        </div>
       </div>
-    </div><br/>
-    <!-- Grid items -->
-    <div class="row">
-      {% for post in paginator.posts %}
-      <div class="one-third column article-container">
-        <a href="{{site.url}}{{post.url}}">
-          <!-- If article has a featured image -->
-          {% if post.ft %}
-          <img src="{{site.url}}/assets/renders/{{post.imgpath}}{{post.ft}}" alt="{{post.title}}" class="featured-image"> {% else %}
-          <!-- Otherwise display placeholder -->
-          <img src="https://placehold.it/853x480?text=NO+FEATURED+IMAGE" alt="{{post.title}}" class="featured-image"> {% endif %}
-          <!-- Article title -->
-          <h4 class="article-title">{{post.title}}</h4>
+    </div>
+  </header>
+
+  {% if site.tags.featured %}
+    <h1 class="featured-projects-title">/featured-projects</h1>
+    <section class="featured-projects">
+      {% for post in site.tags.featured %}
+        <a class="project" href="{{ site.url }}{{ post.url }}">
+          {% if post.featured %}
+            <img src="{{ site.url }}/{{ site.media-folder }}/{{ post.media-folder }}/{{ post.featured }}" alt="{{ post.title }}">
+          {% else %}
+            <!-- No featured image -->
+            <img src="https://placehold.it/853x480?text=NO+FEATURED+IMAGE" alt="{{ post.title }}">
+          {% endif %}
+          <h2><span class="title">{{ post.title }}</span></h2>
+          <div class="skills-container">
+            {% if post.skills %}
+              {% for skill in post.skills %}
+                <div class="skill">{{ skill }}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
         </a>
-      </div>
       {% endfor %}
-    </div>
-    <!-- If there is pagination -->
+    </section>
+  {% endif %}
+
+  <section class="projects">
+    <h1>/projects</h1>
+    {% for post in paginator.posts %}
+      <a class="project" href="{{ site.url }}{{ post.url }}">
+        {% if post.featured %}
+          <img src="{{ site.url }}/{{ site.media-folder }}/{{ post.media-folder }}/{{ post.featured }}" alt="{{ post.title }}">
+        {% else %}
+          <!-- No featured image -->
+          <img src="https://placehold.it/853x480?text=NO+FEATURED+IMAGE" alt="{{ post.title }}">
+        {% endif %}
+        <h2><span class="title">{{ post.title }}</span></h2>
+        <div class="skills-container">
+          {% if post.skills %}
+            {% for skill in post.skills %}
+              <div class="skill">{{ skill }}</div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
     {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      <!-- Next page arrow -->
-      {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}" style="color:#e9ab7a">&larr; Prev</a>&emsp;&emsp;&emsp;{% endif %}
-      <!-- Previous page arrow -->
-      {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}" style="color:#e9ab7a">Next &rarr;</a>{% endif %}
-    </div>
+      <div class="paginator">
+        {% if paginator.previous_page %}
+          <a class="prev" href="{{ paginator.previous_page_path }}">&larr; previous</a>
+        {% endif %}
+        {% if paginator.next_page %}
+          <a class="next" href="{{ paginator.next_page_path }}">next &rarr;</a>
+        {% endif %}
+      </div>
     {% endif %}
+  </section>
+
+  {% include footer.html %}

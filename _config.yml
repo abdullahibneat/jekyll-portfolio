@@ -1,41 +1,54 @@
-# Your website's name
+# Change this to your website's URL when you publish your site.
+url: abdu.io
+
+# CSS: path to CSS folder
+css-folder: assets/css
+
+# Media: path to folder containing all media (including projects)
+media-folder: assets/media
+
+#
+# Global variables
+#
+
+# Logo: text with typewriter animation
+logo: /abdullah
+
+# Name: website's name
 name: Abdullah Ibne Atiq
 
-# Website description, shown on index.html
-description: Hi there! My name is Abdullah, and I'm a student passionate about the apllication of Computer Science to improve the way we live. Here you can find some of the projects I've worked on.
+# Description: A brief description that appears under the logo
+description: Computer Science student, with peculiar interest in XR technologies, actively engaging with Web Development and programming.
 
-# Your name
-author: Abdullah Ibne Atiq
+# Featured: an image displayed on social media when this website is linked, saved in the "media" folder
+featured: siteFT.jpg
 
-# Customize article URL format
+# Twitter: Twitter handle (without @)
+twitter: abdullahibneat
+
+# LinkedIn: link to LinkedIn profile
+linkedin: abdullahibneat
+
+# Email: email address
+email: hello@abdu.io
+
+# Skills: array of skills to be shown under the description
+skills: [3D Modelling, Texturing, Animation, Video Editing, AR/VR, Unreal Engine, Unity, Front-end]
+
+#
+# Required plugins
+#
+
+plugins:
+  - jekyll-sitemap  # Generates sitemap
+  - jekyll-paginate # Paginates posts in index.html
+  - jekyll-redirect-from # Redirection
+
+# Customize posts URL format
 permalink: /project/:title/
 
-# Set your timezone
-timezone: Europe/London
-
-# How many articles per page in index.html?
+# How many posts per page in index.html?
 paginate: 6
 
 # Customize index pages URL format
 paginate_path: "/page/:num/"
-
-# H1 title in index.html
-indextitle: Aspiring programmer. 3D Artist. XR technology enthusiast.
-
-# Your email
-email: me@abdu.io
-
-# Direct URL to website featured image for use on social networks
-ft: https://abdu.io/assets/images/siteFT.jpg
-
-# Twitter handle
-twitter: abdullahibneat
-
-# This is the default that's used to preview.
-# Change this to your website's URL when you publish your site.
-url: https://abdu.io
-
-# Sitemap
-gems:
-  - jekyll-sitemap
-  - jekyll-redirect-from
