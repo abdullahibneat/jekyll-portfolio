@@ -11,7 +11,7 @@ The HTML source can be found on the [html-template branch](https://github.com/ab
 Fork this repository, naming your repository in the following format: `yourusername.github.io` if you plan to use [GitHub Pages](https://pages.github.com/).
 
 ## Configuring Jekyll
-Configure the `_config.yml` file with your own details. Use the comments as a guide. Remember to change the URL to `yourusername.github.io`.
+Configure the `_config.yml` file with your own details. Use the comments as a guide. Remember to change the URL to `https://yourusername.github.io`. **It is important to include `http://` or `https://` at the beginning of the URL.**
 
 ## Logo and images
 The logo is now text based and can be changed from the `_config.yml` configuration file.
