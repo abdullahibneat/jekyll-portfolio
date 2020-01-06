@@ -24,7 +24,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ site.url }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.featured %}{{ site.url }}/{{ site.media-folder }}/{{ page.media-folder }}/{{ page.featured }}{% else %}{{ site.url }}/{{ site.media-folder }}/{{ site.featured }}{% endif %}">
+    <meta name="title" property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+    <meta name="description" property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="image" property="og:image" content="{{ site.url }}/{{ site.media-folder }}/{% if page.featured %}{{ page.media-folder }}/{{ page.featured }}{% else %}{{ site.featured }}{% endif %}">
 </head>
