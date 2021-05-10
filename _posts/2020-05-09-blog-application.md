@@ -9,7 +9,7 @@ skills: [JavaScript, React, NodeJS, MongoDB]
 ---
 *Application built with **React** and **NodeJS**, data stored using **MongoDB** and deployed online using **Vercel (now.sh)**.*
 
-*Application available live at [https://blog-frontend.abdullahibneat.now.sh/](https://blog-frontend.abdullahibneat.now.sh/) (frontend) and [https://blog-backend.abdullahibneat.now.sh/](https://blog-backend.abdullahibneat.now.sh/) (backend), and source code available on GitHub: [frontend](https://github.com/abdullahibneat/blog-frontend) / [backend](https://github.com/abdullahibneat/blog-backend)*
+*Application available live at [https://blog-frontend.abdullahibneat.now.sh/](https://blog-frontend.abdullahibneat.vercel.app/) (frontend) and [https://blog-backend.abdullahibneat.now.sh/](https://blog-backend.abdullahibneat.now.sh/) (backend), and source code available on GitHub: [frontend](https://github.com/abdullahibneat/blog-frontend) / [backend](https://github.com/abdullahibneat/blog-backend)*
 
 "Blog list" was an independent exercise developed as part of the FullStackOpen challenge. The application allows authenticated users to share links to blog articles, which are stored in a MongoDB database and can be accessed through an Express-based API.
 
